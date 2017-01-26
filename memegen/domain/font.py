@@ -8,7 +8,7 @@ log = logging.getLogger(__name__)
 class Font:
     """Font file used to render text onto an image."""
 
-    DEFAULT = 'titilliumweb-black'
+    DEFAULT = 'impact'
 
     def __init__(self, path):
         self._path = path
