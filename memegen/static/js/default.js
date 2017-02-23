@@ -17,6 +17,7 @@ function generateMeme() {
   var url = "/api/templates/" + key;
   var data = {"top": top, "bottom": bottom, "redirect": false};
 
+
   $.post(url, data, function(data){
     $("#meme-image img").attr('src', data.href);
     $("#meme-image").attr('href', data.href);

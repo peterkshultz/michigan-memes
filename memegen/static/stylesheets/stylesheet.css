@@ -3,7 +3,7 @@
 a,
 a:focus,
 a:hover {
-  color: #555;
+  color: #00274c;
   text-decoration: underline;
 }
 
@@ -17,14 +17,14 @@ body {
 .btn-primary:focus,
 .btn-primary:hover,
 .btn-primary:active:hover {
-  background-color: #555;
+  background-color: #00274c;
   border-width: 0;
 }
 
 /*********************************************/
 /* masthead */
 .masthead {
-  background-color: #333;
+  background-color: #00274c;
   color: #fff;
   padding-bottom: 10px;
 }
@@ -63,7 +63,7 @@ body {
 
 .generator {
   padding: 8px;
-  color: #555;
+  color: #00274c;
 }
 
 
@@ -96,7 +96,7 @@ body {
 }
 
 span.meme-text {
-  color: #555;
+  color: #00274c;
 }
 
 /*********************************************/
@@ -108,7 +108,7 @@ span.meme-text {
 
 .meme-holder {
   text-align: center;
-  color: #555;
+  color: #00274c;
 }
 .meme-holder img {
   max-width: 300px;
@@ -124,7 +124,7 @@ span.meme-text {
 .meme-templates {
   margin-bottom: 50px;
   text-align: center;
-  color: #555;
+  color: #00274c;
 }
 
 .meme-img {
@@ -146,7 +146,7 @@ span.meme-text {
   width: 100%;
   min-height: 50px;
   padding: 0 20px;
-  background-color: #555;
+  background-color: #00274c;
 }
 
 .footer-nav {

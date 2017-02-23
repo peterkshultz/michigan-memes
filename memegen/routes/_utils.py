@@ -7,6 +7,12 @@ from flask import (Response, url_for, render_template, send_file,
                    current_app, request)
 
 
+import os
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.image import MIMEImage
+from email.mime.multipart import MIMEMultipart
+
 log = logging.getLogger(__name__)
 
 
@@ -56,6 +62,29 @@ def display(title, path, share=False, raw=False, mimetype='image/jpeg'):
 
     else:
         log.info("Sending image: %s", path)
+
+
+        img_data = open(path, 'rb').read()
+        msg = MIMEMultipart()
+        msg['Subject'] = 'subject'
+        msg['From'] = 'e@mail.cc'
+        msg['To'] = 'e@mail.cc'
+
+        text = MIMEText("test")
+        msg.attach(text)
+        image = MIMEImage(img_data, name=os.path.basename(path))
+        msg.attach(image)
+
+        s = smtplib.SMTP('localhost', 25)
+        s.ehlo()
+        s.starttls()
+        s.ehlo()
+        s.login(UserName, UserPassword)
+        s.sendmail(From, To, msg.as_string())
+        s.quit()
+
+
+
         return send_file(path, mimetype=mimetype)
 
 
